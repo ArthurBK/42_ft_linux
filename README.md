@@ -56,3 +56,5 @@ first you need to edit config.sh (in the example upside i assume $LFS = /mnt)
 for now that's all, you will need to finish the configuration by yourself,
 i'm still working on this project. Feel free to open issue if you encouter problems/bugs.
 
+=======
+# 42_ft_linux
