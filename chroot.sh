@@ -7,17 +7,17 @@ extract() {
 	PKG=$1
 	FILE=$PKG.tar.$2
 	cd $SRCS
-	if [ ! -f $SOURCES/$FILE ]; then
+	if [ ! -f "$SOURCES"/"$FILE" ]; then
 		echo "error: unable to find $FILE"
 		exit 1
 	fi
-	if [ -d $PKG ]; then
+	if [ -d "$PKG" ]; then
 		echo "Cleaning previous installation"
 		rm -rv $PKG
 	fi
 	echo "Extracting $PKG"
 	tar -xf $SOURCES/$FILE
-	if [ ! -d $PKG ]; then
+	if [ ! -d "$PKG" ]; then
 		echo "failed to unpack source, check if $FILE exists"
 		exit 1
 	fi
@@ -28,7 +28,7 @@ extract() {
 compile() {
 	PKG=$1
 	make -j$2
-	if [ $? != "0" ]; then
+	if [ $? != 0 ]; then
 		echo "error: failed to compile $PKG"
 		exit 1
 	fi
@@ -48,7 +48,7 @@ build() {
 	fi
 	unset CFG
 	compile $PKG $3
-	if [ ! $NOINSTALL ]; then
+	if [ ! "$NOINSTALL" ]; then
 		echo "Installing $PKG"
 		make install
 	else
@@ -798,7 +798,7 @@ dopython3() {
             --with-ensurepip=yes
 	compile $PKG
 	make install
-	if [ $? != "0" ]; then
+	if [ "$?" != 0 ]; then
 		echo "installation of $PKG failed !"
 		exit 1
 	fi
@@ -938,13 +938,13 @@ docoreutis() {
 	FORCE_UNSAFE_CONFIGURE=1 ./configure \
 			--prefix=/usr            \
             --enable-no-install-program=kill,uptime
-	if [ $? != 0 ]; then
+	if [ "$?" != 0 ]; then
 		echo "configure has failed on $PKG"
 		exit 1
 	fi
 	FORCE_UNSAFE_CONFIGURE=1 make -j
 	make NON_ROOT_USERNAME=nobody check-root
-	if [ $? != 0 ]; then
+	if [ "$?" != 0 ]; then
 		echo "error: failed to build $PKG"
 		exit 1
 	fi
@@ -1125,12 +1125,12 @@ dovim() {
 	FILE=$SOURCES/$PKG.tar.bz2
 	DIR=vim80
 	cd $SRCS
-	if [ ! -f $FILE ]; then
+	if [ ! -f "$FILE" ]; then
 		echo "failed to found source $FILE"
 		exit 1
 	fi
 	tar -xf $FILE
-	if [ ! -d $DIR ]; then
+	if [ ! -d "$DIR" ]; then
 		echo "error: failed to unpack $PKG"
 		exit 1
 	fi
@@ -1168,7 +1168,7 @@ EOF
 dogit() {
 	PKG=git-2.16.2
 	URL=https://mirrors.edge.kernel.org/pub/software/scm/git/$PKG.tar.xz
-	if [ ! -f $SOURCES/$PKG.tar.xz ]; then
+	if [ ! -f "$SOURCES"/"$PKG".tar.xz ]; then
 		wget $URL -O $SOURCES/$PKG.tar.xz
 	fi
 	extract $PKG xz
@@ -1182,7 +1182,7 @@ dozsh() {
 	VERSION=5.4.2
 	PKG=zsh-$VERSION
 	URL=ftp://ftp.funet.fi/pub/unix/shells/zsh/$PKG.tar.gz
-	if [ ! -f $SOURCES/$PKG.tar.gz ]; then
+	if [ ! -f "$SOURCES"/"$PKG".tar.gz ]; then
 		echo "downloading zsh"
 		wget $URL -O $SOURCES/$PKG.tar.gz
 	fi

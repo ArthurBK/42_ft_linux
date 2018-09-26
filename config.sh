@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 export LFS=/mnt
 export LFS_TGT=$(uname -m)-lfs-linux-gnu
 export LFS_USER=abonneca

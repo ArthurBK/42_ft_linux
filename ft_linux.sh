@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 source ./config.sh
 SOURCES=$LFS/usr/src/sources
 ################################ GENERIC PART ##################################
@@ -480,37 +480,37 @@ clean_objs() {
 create_tools() {
 	get_sources
 	mk_tools
-	build_binutils_step1												# 5.4
-	build_gcc_step1														# 5.5
-	build_api_headers													# 5.6
-	build_glibc															# 5.7
-	build_stdlibcxx														# 5.8
-	build_binutils_step2												# 5.9
-	build_gcc_step2														# 5.10
-	build_tclcore														# 5.11
-	build_expect														# 5.12
-	build_dejagnu														# 5.13
-	build_generic m4-1.4.18 xz											# 5.14
-	build_ncurses														# 5.15
-	build_bash															# 5.16
-	build_generic bison-3.0.4 xz										# 5.17
-	build_generic bzip2-1.0.6 gz "" PREFIX=/tools						# 5.18
-	build_coreutils														# 5.19
-	build_generic diffutils-3.6 xz										# 5.20
-	build_generic file-5.32 gz											# 5.21
-	build_generic findutils-4.6.0 gz									# 5.22
-	build_generic gawk-4.2.1 xz											# 5.23
-	build_deftext														# 5.24
-	build_generic grep-3.1 xz											# 5.25
-	build_generic gzip-1.9 xz											# 5.26
-	build_make															# 5.27
-	build_generic patch-2.7.6 xz										# 5.28
-	build_perl															# 5.29
-	build_generic sed-4.4 xz											# 5.30
-	build_generic tar-1.30 xz											# 5.31
-	build_generic texinfo-6.5 xz										# 5.32
-	build_utillinux														# 5.33
-	build_generic xz-5.2.3 xz											# 5.34
+	# build_binutils_step1												# 5.4
+	# build_gcc_step1														# 5.5
+	# build_api_headers													# 5.6
+	# build_glibc															# 5.7
+	# build_stdlibcxx														# 5.8
+	# build_binutils_step2												# 5.9
+	# build_gcc_step2														# 5.10
+	# build_tclcore														# 5.11
+	# build_expect														# 5.12
+	# build_dejagnu														# 5.13
+	# build_generic m4-1.4.18 xz											# 5.14
+	# build_ncurses														# 5.15
+	# build_bash															# 5.16
+	# build_generic bison-3.0.4 xz										# 5.17
+	# build_generic bzip2-1.0.6 gz "" PREFIX=/tools						# 5.18
+	# build_coreutils														# 5.19
+	# build_generic diffutils-3.6 xz										# 5.20
+	# build_generic file-5.32 gz											# 5.21
+	# build_generic findutils-4.6.0 gz									# 5.22
+	# build_generic gawk-4.2.1 xz											# 5.23 = not the same
+	# build_deftext														# 5.24
+	# build_generic grep-3.1 xz											# 5.25
+	# build_generic gzip-1.9 xz											# 5.26
+	# build_make															# 5.27
+	# build_generic patch-2.7.6 xz										# 5.28
+	# build_perl															# 5.29
+	# build_generic sed-4.4 xz											# 5.30
+	# build_generic tar-1.30 xz											# 5.31
+	# build_generic texinfo-6.5 xz										# 5.32
+	# build_utillinux														# 5.33
+	# build_generic xz-5.2.3 xz											# 5.34
 	# clean_objs														# 5.35
 	echo "Stage 5 complete ! it's something !"
 }
