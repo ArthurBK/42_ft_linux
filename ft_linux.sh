@@ -14,18 +14,18 @@ unpack() {
 		TARGET=$SOURCES/$FILE
 	fi
 
-	if [ ! -f $TARGET ]; then
+	if [ ! -f "$TARGET" ]; then
 		echo "unpack error: unable to find $TARGET"
 		exit 1
 	fi
 
-	if [ -d $PKG ]; then
+	if [ -d "$PKG" ]; then
 		echo "unpack cleaning previous installation"
 		rm -r $PKG
 	fi
 	echo "Extracting $PKG"
 	tar -xf $TARGET
-	if [ ! -d $PKG ]; then
+	if [ ! -d "$PKG" ]; then
 		echo "failed to unpack source, check if $FILE exists"
 		exit 1
 	fi
@@ -114,7 +114,7 @@ build_gcc_step1() {
 	echo "prepairing gcc"
 	PKG=gcc-7.3.0
 	cd $SRCS
-	if [ -d $PKG ]; then
+	if [ -d "$PKG" ]; then
 		echo cleaning previous dir
 		rm -rf $PKG
 		echo clean done
@@ -284,7 +284,7 @@ build_gcc_step2() {
 	PKG=gcc-7.3.0
 	echo "making $PKG step 2"
 	cd $SRCS
-	if [ -d $PKG ]; then
+	if [ -d "$PKG" ]; then
 		rm -rfv $PKG
 	fi
 	tar -xf $SOURCES/$PKG.tar.xz
@@ -529,7 +529,7 @@ sysmount() {
 		mount -vt proc proc $LFS/proc ;\
 		mount -vt sysfs sysfs $LFS/sys ;\
 		mount -vt tmpfs tmpfs $LFS/run
-	if [ -h $LFS/dev/shm ]; then
+	if [ -h "$LFS"/dev/shm ]; then
 		mkdir -pv $LFS/$(readlink $LFS/dev/shm)
 	fi
 	echo "sysmount done"

@@ -1,7 +1,7 @@
 #!/tools/bin/bash
-export SRCS=/usr/src
+export SRCS=$LFS/usr/src
 export SOURCES=$SRCS/sources
-export LFS_USER=snicolet
+export LFS_USER=abonneca
 
 extract() {
 	PKG=$1
