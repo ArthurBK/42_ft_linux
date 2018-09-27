@@ -1,5 +1,5 @@
 #!/tools/bin/bash
-export SRCS=$LFS/usr/src
+export SRCS=/usr/src
 export SOURCES=$SRCS/sources
 export LFS_USER=abonneca
 
@@ -1267,38 +1267,38 @@ echo "Hi from chroot"
 # doopenssl
 # dopython3
 # doninja
-# domesson
+# domesson => to update
 # dosystemd
 # doprocps
-# doe2fsprogs
-# docoreutis
-# dobin check-0.12.0 gz
-# dobin diffutils-3.6 xz
-# dogawk
-# dofindutils
-# dogroff
-# dogrub2
-# dobin less-530 gz --sysconfdir=/etc
-# dogzip
-# doiproute
-# dokbd
-# dobin libpipeline-1.5.0 gz
-# domake
-# dobin patch-2.7.6 xz
-# dodbus
-# doutilslinux
-# domandb
-# dotar
-# dotexinfo
-# dovim
+doe2fsprogs
+docoreutis
+dobin check-0.12.0 gz
+dobin diffutils-3.6 xz
+dogawk
+dofindutils
+dogroff
+dogrub2
+dobin less-530 gz --sysconfdir=/etc
+dogzip
+doiproute
+dokbd
+dobin libpipeline-1.5.0 gz
+domake
+dobin patch-2.7.6 xz
+dodbus
+doutilslinux
+domandb
+dotar
+dotexinfo
+dovim
 
-# custon packages
-# dobin curl-7.60.0-20180321 xz
-# dogit
-# dobin nettle-3.4 gz
-# dobin gnutls-3.6.2 xz "--with-included-libtasn1 --with-included-unistring --without-p11-kit"
-# dobin wget-1.19.4 gz
-# dozsh
+custon packages
+dobin curl-7.61.1 xz
+dogit
+dobin nettle-3.4 gz
+dobin gnutls-3.6.2 xz "--with-included-libtasn1 --with-included-unistring --without-p11-kit"
+dobin wget-1.19.4 gz
+dozsh
 
 # cleaning
 #rm -rfv /tmp/*

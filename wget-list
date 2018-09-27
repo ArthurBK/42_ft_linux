@@ -6,7 +6,7 @@ http://ftp.gnu.org/gnu/bash/bash-4.4.18.tar.gz
 http://ftp.gnu.org/gnu/bc/bc-1.07.1.tar.gz
 http://ftp.gnu.org/gnu/binutils/binutils-2.30.tar.xz
 http://ftp.gnu.org/gnu/bison/bison-3.0.4.tar.xz
-http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+http://anduin.linuxfromscratch.org/LFS/bzip2-1.0.6.tar.gz
 https://github.com/libcheck/check/releases/download/0.12.0/check-0.12.0.tar.gz
 http://ftp.gnu.org/gnu/coreutils/coreutils-8.29.tar.xz
 http://dbus.freedesktop.org/releases/dbus/dbus-1.12.4.tar.gz
@@ -20,7 +20,7 @@ http://prdownloads.sourceforge.net/expect/expect5.45.4.tar.gz
 ftp://ftp.astron.com/pub/file/file-5.32.tar.gz
 http://ftp.gnu.org/gnu/findutils/findutils-4.6.0.tar.gz
 https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz
-http://ftp.gnu.org/gnu/gawk/gawk-4.2.0.tar.xz
+http://ftp.gnu.org/gnu/gawk/gawk-4.2.1.tar.xz
 http://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz
 http://ftp.gnu.org/gnu/gdbm/gdbm-1.14.1.tar.gz
 http://ftp.gnu.org/gnu/gettext/gettext-0.19.8.1.tar.xz
@@ -89,5 +89,5 @@ https://ftp.gnu.org/gnu/wget/wget-1.19.4.tar.gz
 https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.16.2.tar.xz
 ftp://ftp.funet.fi/pub/unix/shells/zsh/zsh-5.4.2.tar.gz
 https://ftp.osuosl.org/pub/blfs/conglomeration/gnutls/gnutls-3.6.2.tar.xz
-ftp://gtp.gnu.org/gnu/nettle/nettle-3.4.tar.gz
-https://curl.haxx.se/snapshoots/curl-7.60.0-20180321.tar.xz
+ftp://ftp.gnu.org/gnu/nettle/nettle-3.4.tar.gz
+https://curl.haxx.se/download/curl-7.61.1.tar.xz
